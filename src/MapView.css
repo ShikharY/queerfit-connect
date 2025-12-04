@@ -1,0 +1,196 @@
+.map-view-container {
+  padding: 0;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-header {
+  background: linear-gradient(135deg, #FFBF00 0%, #CFB53B 100%);
+  padding: 20px;
+  color: #333;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.map-wrapper {
+  flex: 1;
+  position: relative;
+  min-height: 60vh;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+
+.popup-content h3 {
+  margin: 0 0 8px 0;
+  color: #CC5500;
+  font-size: 1em;
+}
+
+.popup-content p {
+  margin: 0;
+  font-size: 0.85em;
+  color: #555;
+}
+
+/* Gym Detail Panel */
+.gym-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+  max-height: 50vh;
+  overflow-y: auto;
+  z-index: 20;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  background: linear-gradient(135deg, #FFBF00 0%, #CFB53B 100%);
+  border-radius: 12px 12px 0 0;
+}
+
+.panel-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.close-button {
+  background: rgba(255, 255, 255, 0.7);
+  color: #333;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.3em;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.panel-content {
+  padding: 20px;
+}
+
+.panel-description {
+  margin: 0 0 16px 0;
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.distance-badge {
+  display: inline-block;
+  background-color: #E0B0FF;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-bottom: 16px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.tag.bathroom {
+  background-color: #FFBF00;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.courses-section h3 {
+  margin: 16px 0 12px 0;
+  color: #222;
+  font-size: 1.1em;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.course-list-item {
+  background-color: #f5f5f5;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border-left: 3px solid #FFBF00;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.course-list-item span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .map-wrapper {
+    min-height: 50vh;
+  }
+
+  .gym-panel {
+    max-height: 60vh;
+  }
+
+  .map-header h1 {
+    font-size: 1.5em;
+  }
+
+  .panel-header {
+    padding: 16px;
+  }
+
+  .panel-header h2 {
+    font-size: 1.1em;
+  }
+}

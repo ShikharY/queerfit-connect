@@ -68,6 +68,7 @@ const MapView = () => {
     <div className="map-view-container">
       <div className="map-header">
         <h1>Gyms & Studios</h1>
+        <p>Explore queer-friendly fitness spaces near you</p>
       </div>
       
       <div className="map-wrapper">

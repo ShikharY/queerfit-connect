@@ -137,7 +137,8 @@ const Courses = () => {
   return (
     <div className="courses-container">
       <div className="courses-header">
-        <h1>Courses Near You</h1>
+        <h1>Discover Classes</h1>
+        <p>Find your perfect queer-friendly fitness experience</p>
       </div>
       
       <div className="courses-feed">
